@@ -38,7 +38,7 @@ class StackAllocator
 
 		inline ~StackAllocator() {
 			//Free the memory automagically
-			delete[] this->memory;
+			free(this->memory);
 		}
 
 		//Allocate some memory from the stack
